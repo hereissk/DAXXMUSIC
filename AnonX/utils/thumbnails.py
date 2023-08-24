@@ -125,7 +125,7 @@ async def gen_thumb(videoid, user_id):
         try:
             draw.text(
                 (170, 30),
-                f"STARTED PLAYING",
+                f"𝗦𝗧𝗔𝗥𝗧𝗘𝗗 𝗣𝗟𝗔𝗬𝗜𝗡𝗚 ♪ ♪ ♪",
                 fill="white",
                 stroke_width=3,
                 stroke_fill="grey",

@@ -249,11 +249,11 @@ async def gen_qthumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((395, 395), Image.LANCZOS)
-        width = int((1280 - 395) / 1)
+        logo.thumbnail((385, 385), Image.LANCZOS)
+        width = int((1280 - 380) / 1.22)
         background = Image.open(f"cache/temp{videoid}.png")
         background.paste(logo, (width + 1, 30), mask=logo)
-        background.paste(x, (780, 445), mask=x)
+        background.paste(x, (965, 420), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
@@ -261,7 +261,7 @@ async def gen_qthumb(videoid, user_id):
         ImageFont.truetype("AnonX/assets/font2.ttf", 70)
         arial = ImageFont.truetype("AnonX/assets/font2.ttf", 30)
         ImageFont.truetype("AnonX/assets/font.ttf", 30)
-        para = textwrap.wrap(title, width=32)
+        para = textwrap.wrap(title, width=28)
         try:
             draw.text(
                 (170, 45),

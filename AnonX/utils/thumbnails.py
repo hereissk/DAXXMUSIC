@@ -121,7 +121,7 @@ async def gen_thumb(videoid, user_id):
         ImageFont.truetype("AnonX/assets/font2.ttf", 70)
         arial = ImageFont.truetype("AnonX/assets/font2.ttf", 65)
         ImageFont.truetype("AnonX/assets/font.ttf", 30)
-        para = textwrap.wrap(title, width=28)
+        para = textwrap.wrap(title, width=26)
         try:
             draw.text(
                 (70, 25),
@@ -263,7 +263,7 @@ async def gen_qthumb(videoid, user_id):
         ImageFont.truetype("AnonX/assets/font2.ttf", 70)
         arial = ImageFont.truetype("AnonX/assets/font2.ttf", 65)
         ImageFont.truetype("AnonX/assets/font.ttf", 30)
-        para = textwrap.wrap(title, width=28)
+        para = textwrap.wrap(title, width=26)
         try:
             draw.text(
                 (70, 25),

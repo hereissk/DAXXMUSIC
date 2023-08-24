@@ -119,12 +119,12 @@ async def gen_thumb(videoid, user_id):
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
         ImageFont.truetype("AnonX/assets/font2.ttf", 70)
-        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 60)
+        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 65)
         ImageFont.truetype("AnonX/assets/font.ttf", 30)
         para = textwrap.wrap(title, width=28)
         try:
             draw.text(
-                (130, 30),
+                (100, 25),
                 f"STARTED PLAYING...",
                 fill="white",
                 stroke_width=5,

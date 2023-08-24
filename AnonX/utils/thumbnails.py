@@ -158,7 +158,7 @@ async def gen_thumb(videoid, user_id):
             ((1280 - 45) / 1.48, 598),
             f"{duration}",
             fill="white",
-            font=arial,
+            font=font,
         )
         try:
             os.remove(f"cache/thumb{videoid}.png")
@@ -298,7 +298,7 @@ async def gen_qthumb(videoid, user_id):
             ((1280 - 45) / 1.48, 598),
             f" {duration}",
             fill="white",
-            font=arial,
+            font=font,
         )
 
         try:

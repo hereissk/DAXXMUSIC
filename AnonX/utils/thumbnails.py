@@ -125,11 +125,11 @@ async def gen_thumb(videoid, user_id):
         try:
             draw.text(
                 (170, 30),
-                f"𝗦𝗧𝗔𝗥𝗧𝗘𝗗 𝗣𝗟𝗔𝗬𝗜𝗡𝗚 ♪ ♪ ♪",
+                f"STARTED PLAYING...",
                 fill="white",
                 stroke_width=3,
                 stroke_fill="grey",
-            
+                font=font,
             )
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)

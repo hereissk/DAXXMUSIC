@@ -121,7 +121,7 @@ async def gen_thumb(videoid, user_id):
         ImageFont.truetype("AnonX/assets/font2.ttf", 70)
         arial = ImageFont.truetype("AnonX/assets/font2.ttf", 30)
         ImageFont.truetype("AnonX/assets/font.ttf", 30)
-        para = textwrap.wrap(title, width=32)
+        para = textwrap.wrap(title, width=20)
         try:
             draw.text(
                 (170, 30),

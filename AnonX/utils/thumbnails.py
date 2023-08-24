@@ -254,52 +254,54 @@ async def gen_qthumb(videoid, user_id):
         logo.thumbnail((385, 385), Image.LANCZOS)
         width = int((1280 - 380) / 1.22)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 1, 30), mask=logo)
+        background.paste(logo, (width + 1, 28), mask=logo)
         background.paste(x, (965, 420), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
         ImageFont.truetype("AnonX/assets/font2.ttf", 70)
-        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 30)
+        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 65)
         ImageFont.truetype("AnonX/assets/font.ttf", 30)
         para = textwrap.wrap(title, width=28)
         try:
             draw.text(
-                (170, 45),
-                "ADDED TO QUEUE",
+                (70, 25),
+                "ADDED TO QUEUE...",
                 fill="white",
                 stroke_width=5,
                 stroke_fill="black",
-                font=font,
+                font=arial,
             )
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    ((1280 - 1105) / 3, 140),
+                    (110, 130),
                     f"{para[0]}",
                     fill="white",
-                    stroke_width=1,
-                    stroke_fill="white",
+                    stroke_width=3,
+                    stroke_fill="yellow",
                     font=font,
                 )
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    ((1280 - 1105) / 3, 190),
+                    (110, 183),
                     f"{para[1]}",
                     fill="white",
-                    stroke_width=1,
-                    stroke_fill="white",
+                    stroke_width=3,
+                    stroke_fill="yellow",
                     font=font,
                 )
         except:
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - 45) / 1.48, 598),
+            ((1280 - 45) / 1.46, 580),
             f" {duration}",
             fill="white",
+            stroke_width=2,
+            stroke_fill="black",
             font=font,
         )
 
